@@ -1,0 +1,42 @@
+#wrapper {
+    display:grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 10% 50% 30% 10%;
+    height: 100vh;
+    width: 100%;
+    gap: 5px;
+    grid-template-areas: 
+    'hd nv'
+    'sc1 sc1'
+    'sc2 sc2'
+    'ft ft'
+    ;
+
+}
+
+#nav {
+    grid-area: nv;
+    background-color: blue;
+}
+
+#head {
+    grid-area: hd;
+    background-color: mediumaquamarine;
+}
+
+#sec1 {
+    grid-area: sc1;
+    background-color: chartreuse;
+    background-image: url(../img/blivs.jpg);
+    background-size: cover;
+}
+
+#sec2 {
+    grid-area: sc2;
+    background-color: gold;
+}
+
+#foot {
+    grid-area: ft;
+    background-color: red;
+}
