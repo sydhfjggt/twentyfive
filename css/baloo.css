@@ -1,27 +1,14 @@
-#wrapper {
-    display:grid;
-    grid-template-columns: 30% 1fr;
-    grid-template-rows: 10% 50% 30% 10%;
-    height: 100vh;
-    width: 100%;
-    gap: 5px;
-    grid-template-areas: 
-    'hd nv'
-    'sc1 sc1'
-    'sc2 sc2'
-    'ft ft'
-    ;
 
-}
-
-#nav {
-    grid-area: nv;
-    background-color: blue;
-}
 
 #head {
     grid-area: hd;
     background-color: mediumaquamarine;
+}
+
+#aside {
+   grid-area: as; 
+   background-color: coral;
+
 }
 
 #sec1 {
@@ -40,3 +27,106 @@
     grid-area: ft;
     background-color: red;
 }
+
+/* GRID ENDAST FÖR MOBIL */
+
+@media screen and (max-width:500px){
+    .wrapper {
+    display:grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto 45% 35% 10%;
+    height: 100vh;
+    width: 100%;
+    gap: 4px;
+    grid-template-areas: 
+    'nv hd hd hd'
+    'sc1 sc1 sc1 sc1'
+    'sc2 sc2 sc2 sc2'
+    'ft ft ft ft'
+    ;
+    }
+
+    #nav {
+        grid-area: nv;
+        background-color: blue;
+    }
+
+    .menu {
+        height: 100vh;
+        width: 80vw;
+        background:orange;
+        position: fixed;
+        top:0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, .75);
+        z-index: 10;
+    }
+
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+    }
+
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+
+    .show{
+        left: 0;
+    }
+
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 5;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
+
+    #aside{
+        display:none;
+    }    
+    
+}
+
+@media screen and (min-width:501px){
+.wrapper {
+    display:grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto 45% 35% 10%;
+    height: 100vh;
+    width: 100%;
+    gap: 4px;
+    grid-template-areas: 
+    'hd hd hd hd'
+    'as sc1 sc1 sc1'
+    'as sc2 sc2 sc2'
+    'ft ft ft ft'
+    ;
+}
+    nav{
+        display:none;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    ul{
+        display: none;
+    }
+
+
+
+    
+
+}
+
