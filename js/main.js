@@ -8,7 +8,6 @@ let button = document.querySelector(".menu-button");
 button.addEventListener("click", showMenu)
 
 function showMenu(){
-    console.log("hhehehr")
     let menu =  document.querySelector("nav.menu");
     menu.classList.toggle("show");
 

@@ -3,6 +3,7 @@
 #head {
     grid-area: hd;
     background-color: mediumaquamarine;
+    height: auto;
 }
 
 #aside {
@@ -22,6 +23,26 @@
     grid-area: sc2;
     background-color: gold;
 }
+
+#sec3{
+    grid-area: sc3;
+    background-color: blue;
+    background-image: url(../img/filidutter.jpg);
+    background-size: cover;
+    
+}
+
+#sec4{
+    grid-area: sc4;
+    background-color: red;
+}
+
+#sec5{
+    grid-area: sc5;
+    background-color: green;
+}
+
+
 
 #foot {
     grid-area: ft;
@@ -102,16 +123,16 @@
     display:grid;
     grid-template-columns: 15% auto;
     grid-template-rows: auto 45% 35% 10%;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     gap: 4px;
     grid-template-areas: 
     'hd hd hd hd'
     'as sc1 sc1 sc1'
-    'as sc2 sc2 sc2'
+    'sc2 sc3 sc4 sc5'
     'ft ft ft ft'
     ;
-}
+ }
     nav{
         display:none;
     }
@@ -124,9 +145,44 @@
         display: none;
     }
 
+    .box{
+        border-radius: 4px;       
+        background: yellow;
+        list-style-type: none;
+        padding: 10px;
+    }
 
+    a{
+        text-decoration: none;
+    }
+}
+
+.wrapper2 {
+    display:grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto 45% 35% 10%;
+    height: 100vh;
+    width: 100%;
+    gap: 4px;
+    grid-template-areas: 
+    'hd hd hd hd'
+    'as sca sca sca'
+    'as sca sca sca'
+    'ft ft ft ft'
+    ;
 
     
 
+
 }
 
+#SectionA{
+    grid-area: sca;
+    background-color: orange;
+}
+
+.lada{
+    border-radius: 4px;
+    padding: 10px;
+    background: yellow;
+}
